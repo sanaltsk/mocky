@@ -16,7 +16,8 @@ Follow the below steps
 
 ## Run
 1. Add the endpoint to be mocked in `rest_endpoints.json`
-		`{
+
+		<pre>{
             "endpoint": "daily/weather",
             "method": "GET",	#GET,POST,PUT,DELETE
             "response":	
@@ -24,7 +25,8 @@ Follow the below steps
                 "status_code": 200,
                 "response_body": "hello world"
             }
-        }`
+        }<pre>
+
 2. Run the server using `python app.py` or `python3 app.py` or your flavor of python command.
 `python3 app.py`
 
