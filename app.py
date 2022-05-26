@@ -1,4 +1,6 @@
+import json
 from flask import Flask, Response, request
+
 import util
 
 app = Flask(__name__)
@@ -21,7 +23,9 @@ def process_request(path):
         print(error)
         return Response(response=error, status=500)
     resp = ENDPOINTS.lookup(path)
-    return Response(response=resp.response_body, status=resp.status_code)
+    body = json.dumps(resp.response_body) if type(resp.response_body) \
+                                             in [dict, list] else str(resp.response_body)
+    return Response(response=body, status=resp.status_code)
 
 
 def validate_request(path, method):

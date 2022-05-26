@@ -4,12 +4,67 @@
     "endpoints":
     [
         {
-            "endpoint": "daily",
+            "endpoint": "today",
             "method": "GET",
             "response":
             {
                 "status_code": 200,
-                "response_body": "hello world"
+                "response_body": "Today the temperature is 50F"
+            }
+        },
+        {
+            "endpoint": "weekly",
+            "method": "GET",
+            "response":
+            {
+                "status_code": 200,
+                "response_body": {
+                    "Monday": 50,
+                    "Tuesday": 44,
+                    "Wednesday": 60,
+                    "Thursday": 73,
+                    "Friday": 45,
+                    "Saturday": 89,
+                    "Sunday": 67
+                }
+            }
+        },
+        {
+            "endpoint": "weekly",
+            "method": "GET",
+            "response":
+            {
+                "status_code": 200,
+                "response_body": [
+                    {
+                        "day": "Monday",
+                        "temp": 50
+                    },
+                    {
+                        "day": "Tuesday",
+                        "temp": 44
+                    },
+                    {
+                        "day": "Wednesday",
+                        "temp": 60
+                    },
+                    {
+                        "day": "Thursday",
+                        "temp": 73
+                    },
+                    {
+                        "day": "Friday",
+                        "temp": 45
+                    },
+                    {
+                        "day": "Saturday",
+                        "temp": 89
+                    },
+                    {
+                        "day": "Sunday",
+                        "temp": 67
+                    }
+                ]
             }
         }
     ]
