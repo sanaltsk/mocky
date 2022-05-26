@@ -1,0 +1,16 @@
+{
+    "hostname": "localhost",
+    "port": 8085,
+    "endpoints":
+    [
+        {
+            "endpoint": "daily",
+            "method": "GET",
+            "response":
+            {
+                "status_code": 200,
+                "response_body": "hellow world!"
+            }
+        }
+    ]
+}
